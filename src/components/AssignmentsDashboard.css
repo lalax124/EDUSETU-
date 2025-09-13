@@ -1,0 +1,250 @@
+body {
+  background: #f6f8fa;
+  font-family: 'Nunito', sans-serif;
+}
+.assignments-dashboard {
+  background: #f6f8fa;
+  border-radius: 24px;
+  padding: 24px;
+  margin: 22px auto;
+  max-width: 1200px;
+}
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard-title {
+  font-size: 2.5rem;
+  color: #2d387e;
+  font-weight: 600;
+}
+.dashboard-search {
+  display: flex;
+  align-items: center;
+  background: #e4e8f1;
+  border-radius: 36px;
+  padding: 0 18px;
+  height: 50px;
+  min-width: 320px;
+}
+.search-input {
+  border: none;
+  background: transparent;
+  height: 38px;
+  font-size: 1.1rem;
+  outline: none;
+  color: #2d387e;
+  flex: 1;
+}
+.search-icon {
+  font-size: 1.35rem;
+  color: #595f8c;
+  margin-left: 12px;
+}
+.mic-icon {
+  font-size: 1.3rem;
+  color: #595f8c;
+  margin-left: 10px;
+}
+
+.dashboard-cards {
+  display: flex;
+  gap: 18px;
+  margin: 32px 0 18px 0;
+}
+.dashboard-card {
+  background: #dde3f7;
+  border-radius: 18px;
+  padding: 16px 20px;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  flex: none;
+}
+.dashboard-card-icon {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  color: #25327a;
+}
+.dashboard-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #25327a;
+  margin-bottom: 3px;
+}
+.dashboard-card-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #25327a;
+}
+.dashboard-card-notify {
+  min-width: 220px;
+}
+.dashboard-card-details {
+  margin-top: 5px;
+  color: #2d387e;
+  font-size: 0.98rem;
+}
+.dashboard-card-detail-icon {
+  font-size: 1rem;
+  color: #595f8c;
+  margin-right: 8px;
+}
+
+.dashboard-filters {
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: #595f8c;
+}
+.filter-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+.filter-select {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #dde3f7;
+  font-size: 1rem;
+  color: #2d387e;
+  min-width: 130px;
+}
+.filter-date {
+  background: #dde3f7;
+  font-size: 1rem;
+  color: #2d387e;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  min-width: 190px;
+}
+
+.dashboard-table {
+  background: #f6f8fa;
+  border-radius: 16px;
+  margin-top: 12px;
+  overflow-x: auto;
+  box-shadow: 0 2px 8px rgba(44,56,126,0.12);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1.5px solid #25327a;
+  text-align: left;
+  padding: 13px 12px;
+  font-size: 1.08rem;
+}
+th {
+  background: #25327a;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.status-tag {
+  display: inline-block;
+  padding: 4px 16px;
+  border-radius: 12px;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #fff;
+}
+.status-active {
+  background: #19cb8c;
+}
+.status-overdue {
+  background: #ee650e;
+}
+.status-completed {
+  background: #5d7cf9;
+}
+
+/* Tablet and smaller devices */
+@media (max-width: 768px) {
+  .assignments-dashboard {
+    width: 95%;
+    padding: 16px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .dashboard-search {
+    min-width: 100%;
+    height: 44px;
+  }
+
+  .dashboard-title {
+    font-size: 2rem;
+  }
+
+  .dashboard-cards {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .dashboard-card {
+    min-width: calc(50% - 12px);
+  }
+
+  .dashboard-card-notify {
+    min-width: 100%;
+  }
+
+  .filter-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .filter-select,
+  .filter-date {
+    min-width: 100%;
+  }
+
+  th, td {
+    font-size: 1rem;
+    padding: 10px 8px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .dashboard-title {
+    font-size: 1.6rem;
+  }
+
+  .dashboard-search {
+    height: 38px;
+  }
+
+  .search-input {
+    font-size: 0.95rem;
+  }
+
+  .dashboard-card-title {
+    font-size: 1rem;
+  }
+
+  .dashboard-card-value {
+    font-size: 1.1rem;
+  }
+
+  th, td {
+    font-size: 0.9rem;
+    padding: 8px 6px;
+  }
+
+  .filter-select,
+  .filter-date {
+    font-size: 0.9rem;
+  }
+}
