@@ -1,11 +1,11 @@
-import React from "react";
-import Dashboard from "./Dashboard";
-import heroImage from "./Images/Sign up (1).png"; 
-import heroIrregularBg from './Images/Sign up (2).png';
+
+import heroIrregularBg from './images/Sign up (2).png';
 import { useNavigate } from "react-router-dom";
 
 const navigate = useNavigate();
-
+const handleSignInClick = () => {
+  navigate("/LoginPage");
+}
 const styles = {
   container: {
     background: "#D6D2EC",
@@ -203,7 +203,7 @@ export default function HomePage() {
             <div>Assessment</div>
             <div>Library</div>
           </div>
-          <button style={styles.navButton}>Login or Sign Up</button>
+          <button onClick={handleSignInClick} style={styles.navButton}>Login or Sign Up</button>
         </div>
       </div>
 
@@ -213,7 +213,7 @@ export default function HomePage() {
           <div style={styles.heroTitle}>
             Your Journey <br />
             To <span style={styles.academic}>Academic</span> Excellence <br />
-            <button style={styles.startButton}>START</button> Here
+            <button onClick={handleSignInClick} style={styles.startButton}>START</button> Here
           </div>
         </div>
       </div>
@@ -223,7 +223,7 @@ export default function HomePage() {
         <div style={styles.card}>
           <span style={styles.trophy}>🏆</span>
           <div style={styles.cardTitle}>interactive learning games</div>
-          <button style={styles.signInButton}>SIGN IN</button>
+          <button onClick={handleSignInClick} style={styles.signInButton}>SIGN IN</button>
         </div>
         <div style={{ ...styles.card, background: "#E9D8FE" }}>
           <span style={styles.cardIcon}>📊</span>
@@ -238,3 +238,4 @@ export default function HomePage() {
     </div>
   );
 }
+
